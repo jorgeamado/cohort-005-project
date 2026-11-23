@@ -18,6 +18,7 @@ import {
   Sun,
   LogOut,
   Settings,
+  FlaskConical,
 } from "lucide-react";
 
 interface CurrentUser {
@@ -178,6 +179,20 @@ export function Sidebar({
             Team
           </NavLink>
         )}
+        <NavLink
+          to="/prototype/knock-spike"
+          className={({ isActive }) =>
+            cn(
+              "mt-2 flex items-center gap-3 rounded-md border border-dashed border-amber-500/50 px-3 py-2 text-sm font-medium transition-colors",
+              isActive
+                ? "bg-amber-500/15 text-amber-700 dark:text-amber-300"
+                : "text-amber-700/80 hover:bg-amber-500/10 dark:text-amber-300/80"
+            )
+          }
+        >
+          <FlaskConical className="size-4" />
+          Knock Spike
+        </NavLink>
       </nav>
 
       {recentCourses.length > 0 && (
